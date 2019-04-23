@@ -1,0 +1,32 @@
+<body class="centralizarconteudo"> 
+
+<h1><%= @rodada.descricao %></h1>
+
+<h4>Digite sua matrícula abaixo para consultar sua posição na fila</h4>
+
+
+<form style="font-size: 20px;" id="form-consultar">
+  <p><strong style="font-size: 16px;">Matrícula:</strong>
+    <input style="color: green;font-size: 18px;width: 170px;" type="number" name="matricula" id="matricula" autofocus="autofocus" size="12">
+    <input class="buttonmenor green" type="submit" name="Consultar" value="Consultar">
+  </p>    
+</form>
+<br><br>
+<p><%= link_to 'Acompanhar telão', tela_path, class: 'button blue' %></p>
+
+
+</body>
+
+
+
+
+
+
+
+<script type="text/javascript">
+  $("#form-consultar").on("submit", function() {
+    var matricula = $("#matricula").val();
+    window.location.href = "<%= root_path %>posicao/" + matricula;
+    return false;
+  });
+</script>
