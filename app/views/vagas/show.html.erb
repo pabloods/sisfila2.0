@@ -1,0 +1,40 @@
+<body class="centralizarconteudo">
+
+<p id="notice"><%= notice %></p>
+
+<h1><%= @vaga.aluno.nome %></h1>
+<br><br>
+
+
+<p class="formatacaotabela">
+  <strong>Aluno:</strong>
+  <%= @vaga.aluno.nome %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Posicao:</strong>
+  <%= @vaga.posicao %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Hora que entrou na fila:</strong>
+  <%= @vaga.created_at.strftime("%d-%m-%Y, %H:%M:%S") %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Hora que foi atendido:</strong>
+  <%= @vaga.data_chamada.strftime("%d-%m-%Y, %H:%M:%S")  %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Tempo na fila:</strong>
+  <%= @dif[:days] %> dia(s),
+  <%= @dif[:hours] %> hora(s),
+  <%= @dif[:minutes] %> minuto(s) e
+  <%= format("%.0f", @dif[:seconds]) %> segundo(s)
+</p>
+
+
+</body>
+<%= link_to 'Editar vaga', edit_vaga_path(@vaga), class: 'button botaoavancar'  %>
+<%= link_to 'Voltar para Vagas', vagas_path, class: 'button botaovoltar'  %>

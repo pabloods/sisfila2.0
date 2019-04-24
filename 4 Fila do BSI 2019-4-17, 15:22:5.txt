@@ -1,0 +1,26 @@
+Estatística gerada às: 17-4-2019, 15:22:5 
+ 
+ 
+ 
+Número de pessoas aguardando: 2 
+ 
+Número de pessoas atendidas: 3 
+ 
+Número de pessoas que entraram na fila: 5 
+ 
+Tempo médio de espera na fila: 0 hora(s), 6 minuto(s) e 48 segundo(s) 
+ 
+Tempo médio de atendimento: 0 hora(s), 3 minuto(s) e 52 segundo(s) 
+ 
+Número médio de clientes na fila: 1.1184218668852703 
+ 
+Horário em que a primeira pessoa entrou na fila: 17-4-2019, 14:37:6 
+ 
+Horário em que a ultima pessoa entrou na fila: 17-4-2019, 15:7:30 
+ 
+Horário em que a primeira pessoa foi atendida: 17-4-2019, 15:13:26 
+ 
+Horário em que a ultima pessoa foi atendida: 17-4-2019, 15:21:10 
+ 
+Intensidade da fila: 0.6370911751265397 
+ 

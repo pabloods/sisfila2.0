@@ -1,0 +1,9 @@
+I"Ý(function() {
+  App.telao_notifications = App.cable.subscriptions.create("TelaoNotificationsChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {}
+  });
+
+}).call(this);
+:ET
