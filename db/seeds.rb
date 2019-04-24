@@ -60,8 +60,8 @@ Rodada.create(descricao: "Matrícula BCC - acesse http://v.ht/filabcc")
 
 ### Criar usuário admin (troque a senha no comando abaixo):
 User.create(email: "januario@example.com", superadmin_role: true, password: "jnr1111", password_confirmation: "jnr1111")
-User.create(email: "rodrigo@example.com", user_role: true, password: "rdrg2222", password_confirmation: "rdrg2222")
-User.create(email: "pablo@example.com", user_role: true, password: "pbl3333", password_confirmation: "pbl3333")
+User.create(email: "rodrigo@example.com", superadmin_role: true, password: "rdrg2222", password_confirmation: "rdrg2222")
+User.create(email: "pablo@example.com", superadmin_role: true, password: "pbl3333", password_confirmation: "pbl3333")
 
 ### Criar mesas (você pode modificá-las em `/mesas`):
 Mesa.create(nome: "Sala 116, Mesa 1")
