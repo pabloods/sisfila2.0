@@ -1,0 +1,54 @@
+<%= form_with(model: aluno, local: true) do |form| %>
+  <% if aluno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aluno.errors.count, "error") %> prohibited this aluno from being saved:</h2>
+
+      <ul>
+      <% aluno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <body class="centralizarconteudo"> 
+
+  <div class="field">
+    <b><%= form.label :matricula %></b>
+    <%= form.text_field :matricula %>
+  </div>
+
+  <div class="field">
+    <b><%= form.label :nome %></b>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <b><%= form.label :ativo %></b>
+    <%= form.check_box :ativo %>
+  </div>
+
+  <div class="field">
+    <b><%= form.label :score %></b>
+    <%= form.text_field :score %>
+  </div>
+
+  <div class="field">
+    <b><%= form.label :fezPreMatricula %></b>
+    <%= form.check_box :fezPreMatricula %>
+  </div>
+
+  <div class="field">
+    <b><%= form.label :formando %></b>
+    <%= form.check_box :formando %>
+  </div>
+
+  <br><br>
+  
+  <div class="actions">
+    <%= form.submit 'Enviar', class: 'button green'%>
+  </div>
+
+
+<% end %>
+</body>
