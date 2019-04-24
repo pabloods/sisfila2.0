@@ -313,6 +313,7 @@ body, html {
   top: 40%;
   background-color: #ec7b7bb3; /*#66666661;*/
   border-radius: 50px 0px 0px 50px; 
+  line-height: 100%;
 }
 
 .botaoavancar{
@@ -324,6 +325,33 @@ body, html {
   top: 40%;
   background-color: #64b57ecf;/*#66666661;*/
   border-radius: 0px 50px 50px 0px; 
+  line-height: 100%;
+}
+
+
+
+.botaovoltaralunos{
+  position: absolute;
+  top: 80%;
+  left: 4%;
+  height: 3%;
+  width: 13%;
+  background:#fff;  
+  background-color: #ec7b7bb3; /*#66666661;*/
+  border-radius: 50px 0px 0px 50px; 
+  line-height: 100%;
+}
+
+.botaoavancaralunos{
+  position: absolute;
+  top: 80%;
+  right: 4%;
+  height: 3%;
+  width: 13%;
+  background:#fff;
+  background-color: #64b57ecf;/*#66666661;*/
+  border-radius: 0px 50px 50px 0px; 
+  line-height: 100%;
 }
 
 .botaocriarnovo{

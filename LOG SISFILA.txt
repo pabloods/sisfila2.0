@@ -631,3 +631,39 @@ ID DA VAGA: 7, ID DO ALUNO: 36, POSIÇÃO: 7, RODADA: , ID DA FILA 4.
 17/4/2019 16:39:18 - O Aluno Ana Iris consultou sua posicao na fila
 ID DO ALUNO: 36, MATRICULA: 213105006, NOME: Ana Iris, ATIVO?: true, SCORE: 5, FEZ PRE MATRICULA?: true, FORMANDO?: true, ID DO COLEGIADO: 3. 
 
+24/4/2019 19:59:16 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:5:2 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:7:39 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:8:51 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:8:53 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:8:54 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:9:59 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:10:8 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:10:47 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:11:8 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:19:19 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
+24/4/2019 20:20:1 - O Aluno Nino SI consultou sua posicao na fila
+ID DO ALUNO: 35, MATRICULA: 213105002, NOME: Nino SI, ATIVO?: true, SCORE: 6, FEZ PRE MATRICULA?: false, FORMANDO?: false, ID DO COLEGIADO: 3. 
+
