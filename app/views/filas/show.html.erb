@@ -1,0 +1,55 @@
+<h1>Fila</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  Mesa atual: <b><%= @mesa_atual.nome if @mesa_atual %></b>
+</p>
+
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @fila.codigo %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @fila.nome %>
+</p>
+
+<p>
+  <strong>Prioridade:</strong>
+  <%= @fila.prioridade %>
+</p>
+
+<p>
+  <strong>Ativo:</strong>
+  <%= @fila.ativo %>
+</p>
+
+<p>
+  <strong>Posição atual:</strong>
+  <span style="color: blue;"><%= @fila.posicao %> <%= @fila.vaga_atual&.aluno&.title %></span>
+</p>
+
+<p>
+  <strong>Próxima posição:</strong>
+  <span style="color: #777;"><%= @fila.proxima_vaga&.aluno&.title %></span>
+</p>
+
+
+<div>
+  <%= link_to 'Anterior', filas_anterior_path(@fila), method: :put %> |
+  <%= link_to 'Próximo', filas_proximo_path(@fila), method: :put %>
+</div>
+
+<br>
+
+<div>
+  <%= link_to 'Esvazia Mesa', esvazia_mesa_path, method: :put %>
+</div>
+
+<br><br>
+
+<%= link_to 'Edit', edit_fila_path(@fila) %> |
+<%= link_to 'Back', filas_path %>
