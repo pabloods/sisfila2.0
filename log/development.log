@@ -1556,3 +1556,26 @@ app/views/tela/home.html.erb:1:in `_app_views_tela_home_html_erb__43613086810197
   ↳ db/seeds.rb:252
   [1m[36mAluno Load (0.1ms)[0m  [1m[34mSELECT  "alunos".* FROM "alunos" ORDER BY "alunos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mRodada Load (0.1ms)[0m  [1m[34mSELECT  "rodadas".* FROM "rodadas" ORDER BY "rodadas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2019-04-24 15:53:32 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pablo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TelaController#home as HTML
+  [1m[36mRodada Load (0.2ms)[0m  [1m[34mSELECT  "rodadas".* FROM "rodadas" ORDER BY "rodadas"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/tela_controller.rb:3
+  Rendering tela/home.html.erb within layouts/application
+  Rendered tela/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 12960ms (Views: 12946.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2019-04-24 15:53:45 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2019-04-24 15:53:45 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+InscricaoChannel is transmitting the subscription confirmation
+TelaoNotificationsChannel is transmitting the subscription confirmation
+TelaoNotificationsChannel is streaming from telao_notifications_channel
+InscricaoChannel is streaming from inscricao_channel
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2019-04-24 15:53:47 +0000
+InscricaoChannel stopped streaming from inscricao_channel
+TelaoNotificationsChannel stopped streaming from telao_notifications_channel
