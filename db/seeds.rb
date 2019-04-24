@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
 Aluno.create(matricula: 213105001, nome:"Pablo01 SI", ativo: true, score: 7, fezPreMatricula: true, formando: false, colegiado_id: 3)
 
 Aluno.create(matricula: 213105002, nome:"Ramon02 SI", ativo: true, score: 8, fezPreMatricula: false, formando: true, colegiado_id: 3)
