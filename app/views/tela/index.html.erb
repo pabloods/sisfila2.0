@@ -190,11 +190,11 @@ function atualizaPaginaRealmente(data) {
     if (data.mesas[i].vaga) {
       s += "<p>";
       // s += '<span>Valor de i:' + i + "</span><br>";
-      s += '<span class="mesa">' + data.mesas[i].nome + "</span><br>";
+      s += '<div class="plvest"><span class="mesa">' + data.mesas[i].nome + '</span><br>';
       s += '<span class="codigovaga">' +  "[" + data.mesas[i].vaga.fila.codigo + "_";
       s += data.mesas[i].vaga.posicao + "]</span> ";
-      s += data.mesas[i].vaga.aluno.nome + " ";
-      s += "</p>";
+      s += '<span class="nomealuno">' + data.mesas[i].vaga.aluno.nome + '</span>';
+      s += "</div></p>";
 
       // s += data.mesas[i].vaga.fila.npatendidas + " "; AQUI EU POSSO LER VARIAS COLUNAS DO BANCO, SO FALTA REPOSICIONAR NA TELA
 
@@ -280,13 +280,13 @@ function exibeEstatisticas(data){
       }
 
       r = ""
-      r += '<br><div id="telaprincipalestatistica"> ESTATÍSTICAS DA FILA </div>' + data.mesas[j].vaga.fila.nome;
+      r += '<br><div class="plvest" id="telaprincipalestatistica"> ESTATÍSTICAS DA FILA </div>' + data.mesas[j].vaga.fila.nome;
       r += "<p>";
       // r += '<span>Valor de j:' + j + "</span><br>";
-      r += '<span> Numero de pessoas atendidas: </span><span id="npatd"><b>' + npatendidas + "</b></span><br><br>";
-      r += '<span> Numero de pessoas aguardando: </span><span id="npagd"><b>' + npaguardando + "</b></span><br><br>";
-      r += '<span> Tempo médio de atendimento: </span><span id="tmatd"><b>' + formataTempo(tempoatendimento) + '</b></span><br><br>';
-      r += '<span> Tempo médio de espera: </span><span id="tme"><b>' + formataTempo(tempoespera) + "</b></span><br>";
+      r += '<span class="plvest"> Numero de pessoas atendidas: </span><b><span id="npatd">' + npatendidas + "</span><br></b><br>";
+      r += '<span class="plvest"> Numero de pessoas aguardando: </span><b><span id="npagd">' + npaguardando + "</span><br></b><br>";
+      r += '<span class="plvest"> Tempo médio de atendimento: </span><b><span id="tmatd">' + formataTempo(tempoatendimento) + '</b></span><br><br>';
+      r += '<span class="plvest"> Tempo médio de espera: </span><b><span id="tme">' + formataTempo(tempoespera) + "</span></b><br>";
       r += "</p>";
     
     }

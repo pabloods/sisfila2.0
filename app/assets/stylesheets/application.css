@@ -489,3 +489,21 @@ height: 50%;
 #telaprincipalestatistica{
 font-weight: bolder;
 }
+
+
+@media screen and (max-width:768px) {
+  
+  #relogio, #lgufbadcc{
+    display: none;
+    }
+
+    #npatd, #npagd, #tmatd, #tme, #mesas, #direitaa, #descricao{
+      font-size: 10px;
+    }
+
+    .titulos, .mesa, .codigovaga, .nomealuno, .plvest{
+        font-size: 10px;
+    }
+
+
+}
