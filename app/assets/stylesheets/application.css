@@ -505,5 +505,7 @@ font-weight: bolder;
         font-size: 10px;
     }
 
-
+  .w100 * {
+  font-size: 10px;
+}
 }
