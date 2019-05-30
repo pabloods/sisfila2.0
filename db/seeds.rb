@@ -109,7 +109,7 @@ Aluno.create(matricula: 213105068, nome:"Nino68 CCB", ativo: true, score: 6, fez
 
 Aluno.create(matricula: 213105069, nome:"Moises69 CCB", ativo: true, score: 5, fezPreMatricula: true, formando: false, colegiado_id: 3)
 
-Aluno.create(matricula: 213105070, nome:"Paulinho70 CCB", ativo: true, score: 4, fezPreMatricula: false, formando: false, colegiado_id: 37
+Aluno.create(matricula: 213105070, nome:"Paulinho70 CCB", ativo: true, score: 4, fezPreMatricula: false, formando: false, colegiado_id: 3)
 
 Aluno.create(matricula: 213105071, nome:"Pablo71 CCB", ativo: true, score: 7, fezPreMatricula: true, formando: false, colegiado_id: 3)
 
