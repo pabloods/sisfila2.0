@@ -1,0 +1,38 @@
+<%= form_with(model: mesa, local: true) do |form| %>
+  <% if mesa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mesa.errors.count, "error") %> prohibited this mesa from being saved:</h2>
+
+      <ul>
+      <% mesa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<body class="centralizarconteudo">   
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ativo %>
+    <%= form.check_box :ativo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vaga_id %>
+    <%= form.text_field :vaga_id %>
+  </div>
+
+  <br><br>
+
+  <div class="actions">
+    <%= form.submit 'Enviar', class: 'button green'%>
+  </div>
+<% end %>
+
+</body>

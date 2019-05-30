@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<body class="centralizarconteudo"> 
+
+<br><br>
+<h1>FILAS</h1>
+<br>
+
+<table class="formatacaotabela col4">
+  <thead class="fformatacaotabela col4">
+    <tr class="formatacaotabela col4">
+      <th class="formatacaotabela col4">Codigo</th>
+      <th class="formatacaotabela col4">Nome</th>
+      <th class="formatacaotabela col4">Prioridade</th>
+      <th class="formatacaotabela col4">Ativo</th>
+      <th class="formatacaotabela col4" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @filas.each do |fila| %>
+      <tr>
+        <td class="formatacaotabela col4"><%= fila.codigo %></td>
+        <td class="formatacaotabela col4"><%= fila.nome %></td>
+        <td class="formatacaotabela col4"><%= fila.prioridade %></td>
+        <td class="formatacaotabela col4"><%= fila.ativo %></td>
+        <td class="formatacaotabela col4"><%= link_to 'Mostrar', fila, class: 'buttonmenor azulclaro'  %></td>
+        <td class="formatacaotabela col4"><%= link_to 'Editar', edit_fila_path(fila), class: 'buttonmenor amareloclaro'  %></td>
+        <td class="formatacaotabela col4"><%= link_to 'Apagar', fila, method: :delete, data: { confirm: 'Deseja mesmo apagar?' }, class: 'buttonmenor red'  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Criar Nova Fila', new_fila_path, class: 'button botaocriarnovo' %>
+
+
+<nav id="menutopoesquerdo">
+  <ul>
+  <div style="text-align: left;"><b>Ir para:</b></div>
+    <li><%= link_to 'Home', root_path, class: 'button buttonmenutopo btimpar' %></li>
+    <li><%= link_to 'Alunos', alunos_path, class: 'button buttonmenutopo btpar' %></li>
+    <li><%= link_to 'Colegiados', colegiados_path, class: 'button buttonmenutopo btimpar' %></li>
+    <li><%= link_to 'Filas', filas_path, class: 'button buttonmenutopo btpar' %></li>
+    <li><%= link_to 'Mesas', mesas_path, class: 'button buttonmenutopo btimpar' %></li>
+    <li><%= link_to 'Rodadas', rodadas_path, class: 'button buttonmenutopo btpar' %></li>
+    <li><%= link_to 'Telao', tela_path, class: 'button buttonmenutopo btimpar' %></li>
+    <li><%= link_to 'Vagas', vagas_path, class: 'button buttonmenutopo btpar' %></li>
+  </ul>
+
+  <a style="position: absolute;top: 8%;left: 2%; font-size: 14px; color: white;" class="buttonmenutopo green" href="/esajudaeseses">AJUDA</a>
+</nav>

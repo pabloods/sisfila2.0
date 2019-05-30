@@ -1,0 +1,97 @@
+<body class="centralizarconteudo"> 
+  <div>
+
+<h1 style="text-align: center;">
+  <strong style="color: green;" >ESTATISTICAS COMPLETAS DA FILA</strong>
+</h1>
+
+<h3 style="text-align: center; color: blue;">
+<p>Estatística gerada às: <%=  Time.new.strftime(" %d-%m-%Y, %H:%M:%S") %></p>    
+</h3>
+
+<br>
+<br>
+
+
+
+<p>
+  <strong>Numero de pessoas aguardando:</strong>
+  <span style="color: red;"><%= @fila.npaguardando %></span>
+</p>
+
+<p>
+  <strong>Numero de pessoas atendidas:</strong>
+  <span style="color: green;"><%= @fila.npatendidas %></span>
+</p>
+
+<p>
+  <strong>Numero de pessoas que entraram na fila:</strong>
+  <span style="color: blue;"><%= @fila.nptotal %></span>
+</p>
+
+</p>
+
+<p>
+  <strong>Tempo médio de espera na fila:</strong>
+  <%=  @tmespera[:hours] %> hora(s),
+  <%=  @tmespera[:minutes] %> minuto(s) e
+  <%= format("%.0f", @tmespera[:seconds]) %> segundo(s)
+</p>
+
+<p>
+  <strong>Tempo médio de atendimento:</strong>
+  <%=  @tmpatdfila[:hours] %> hora(s),
+  <%=  @tmpatdfila[:minutes] %> minuto(s) e
+  <%= format("%.0f",  @tmpatdfila[:seconds]) %> segundo(s)
+</p>
+
+<p>
+  <strong>Número médio de clientes na fila:</strong>
+  <%=  @nmcf %>
+</p>
+
+<p>
+  <strong>Horário em que a primeira pessoa entrou na fila:</strong>
+  <%=  @prifila.strftime(" %d-%m-%Y, %H:%M:%S") %>
+</p>
+
+<p>
+  <strong>Horário em que a ultima pessoa entrou na fila:</strong>
+  <%=  @ultfila.strftime(" %d-%m-%Y, %H:%M:%S") %>
+</p>
+
+<p>
+  <strong>Horário em que a primeira pessoa foi atendida:</strong>
+  <%= @priatendida.strftime(" %d-%m-%Y, %H:%M:%S") %>
+</p>
+
+<p>
+  <strong>Horário em que a ultima pessoa foi atendida:</strong>
+  <%= @ultatendida.strftime(" %d-%m-%Y, %H:%M:%S") %>
+</p>
+
+<p>
+  <strong>Intensidade da fila:</strong>
+  <%= @intensidadefila %>
+</p>
+
+<br><br>
+
+<%= link_to 'Salvar Estatísticas em arquivo', filas_gera_estatisticas_arquivo_path(@fila), method: :put, class: 'button green'%>
+<!--
+<p>
+  <strong>Numero de pessoas aguardando:</strong>
+  <span style="color: red;"><%= @vaga&.fila&.npaguardando %>
+  </span>
+</p>
+-->
+</body>
+
+
+<br>
+<br>
+<br>
+<%= link_to 'Voltar para a fila', @fila, class: 'button botaovoltar'  %>
+<%= link_to 'Ir para Filas', filas_path, class: 'button botaoavancar' %>
+
+

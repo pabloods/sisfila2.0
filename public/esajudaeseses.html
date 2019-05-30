@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>SisFila | Ajuda</title>
+	<meta charset="utf-8">
+</head>
+
+<body style="margin: 5px 50px; text-align: justify;">
+
+<h1 style="text-align: center;">AJUDA</h1><br>
+
+<div style="border: solid blue; padding: 0px 20px 20px 20px;">
+<h2> 1. Como inserir uma grande quantidade de alunos no sistema? </h2>
+
+	<p>Primeiramente vá até a área de trabalho e crie uma pasta chamada "matricula-ccc";
+	<br>Após criar a pasta insira os 3 arquivos listados abaixo:</p>
+
+	<p>
+	O primeiro arquivo deve conter o escalonamento dos alunos (scores) e deve se chamar escalonamento-alunos.txt;<br>
+	O segundo arquivo deve conter os formandos e deve se chamar formandos.txt;<br>
+	O terceiro arquivo deve conter os alunos que fizeram pré matrícula e deve se chamar prematricula.csv;<br>
+	</p>
+
+	<p>
+	# Caso o sistema esteja rodando localmente (na sua própria maquina), utilize os comandos:<br>
+	FILE=~/Desktop/matricula-ccc/escalonamento-alunos.txt rails runner script/le-escalonamento.rb
+	FILE=~/Desktop/matricula-ccc/formandos.txt rails runner script/le-formandos.rb
+	FILE=~/Desktop/matricula-ccc/prematricula.csv rails runner script/le-prematricula.rb
+	</p>
+
+	# Caso o sistema esteja hospedado no Heroku, utilize os seguintes comandos:
+	cat ~/Desktop/matricula-ccc/escalonamento-alunos.txt | heroku run --no-tty FILE=/dev/stdin rails runner script/le-escalonamento.rb
+	cat ~/Desktop/matricula-ccc/formandos.txt | heroku run --no-tty FILE=/dev/stdin rails runner script/le-formandos.rb
+	cat ~/Desktop/matricula-ccc/prematricula.csv | heroku run --no-tty FILE=/dev/stdin rails runner script/le-prematricula.rb
+</div>
+
+<div style="border: solid red; margin-top: 40px; padding: 0px 20px 20px 20px;">
+<h2> 2. Como iniciar a chamada de alunos? </h2>
+
+	<p>
+	Primeiramente você deve certificar que existam alunos na fila, para se certificar vá até "Vagas" e veja se já existe algum aluno na fila. <br>
+	</p>
+
+	<p>
+	Caso a fila já possua alunos você deve escolher a mesa em que deseja ocupar. Vá até "Mesas" e selecione uma mesa clicando em "Escolher". Caso o sistema não possua nenhuma mesa cadastrada então crie uma, clicando em "Criar Nova Mesa".
+	</p>
+
+	<p>
+	Após selecionar a mesa vá até "Colegiados" e selecione o colegiado em que deseja realizar as chamadas clicando em "Mostrar". Caso o colegiado não exista, clique em "Criar Novo Colegiado".
+	</p>
+
+
+</div>
+
+
+
+<nav id="menutopoesquerdo">
+  <ul>
+  <div style="text-align: left;"><b>Ir para:</b></div>
+    <li><a class="button buttonmenutopo btimpar" href="/">Home</a></li>
+    <li><a class="button buttonmenutopo btpar" href="/alunos">Alunos</a></li>
+    <li><a class="button buttonmenutopo btpar" href="/colegiados">Colegiados</a></li>
+    <li><a class="button buttonmenutopo btpar" href="/filas">Filas</a></li>
+    <li><a class="button buttonmenutopo btpar" href="/mesas">Mesas</a></li>
+    <li><a class="button buttonmenutopo btpar" href="/rodadas">Rodadas</a></li>
+    <li><a class="button buttonmenutopo btpar" href="/tela">Telão</a></li>
+    <li><a class="button buttonmenutopo btpar" href="/vagas">Vagas</a></li>
+  </ul>
+</nav>
+
+
+</body>
+</html>
+
+
+<style> 
+
+.buttonmenutopo{
+  padding: 4px 12px;
+  margin: 10px 0px 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+
+}
+
+.btimpar{
+  background-color: #d0d0d0;
+  color: #666;
+}
+
+
+.btpar{
+  background-color: #dddddd;
+  color: #666;
+}
+
+#menutopoesquerdo ul {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+#menutopoesquerdo ul li {
+  display: inline; 
+}
+
+
+</style>

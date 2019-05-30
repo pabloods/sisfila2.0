@@ -1,0 +1,102 @@
+<script type="text/javascript">
+  // https://notificationsounds.com/notification-sounds/pull-out-551
+  var audioNotificacao = new Audio('/pull-out.mp3');
+
+  function notificSobreNovoAluno(data) {
+    audioNotificacao.play();
+    toastr.info("" + data.aluno.nome + " acabou de entrar na fila.");
+  }
+
+  function trataInscricao(data) {
+    if (data.fila.colegiado.id == <%= @colegiado.id %> && <%= @vaga.nil? ? "true" : "false" %>) {
+      notificSobreNovoAluno(data);
+    }
+  }
+</script>
+
+<body class="centralizarconteudo">
+
+<h1><%= @colegiado.nome %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  Mesa atual: <b><%= @mesa_atual.nome if @mesa_atual %></b> <%= link_to 'alterar', mesas_path, class: 'buttonminusculo amareloclaro' %>
+</p>
+
+<p>
+  <strong>Aluno na mesa:</strong>
+  <span style="color: blue;"><%= @vaga&.posicao %> <%= @vaga&.aluno&.title %> - <%= @vaga&.codigo %></span>
+
+  <% if @vaga %>
+    <%= link_to 'Desvincular', colegiado_esvazia_mesa_path, method: :put, class: 'buttonminusculo red' %>
+  <% end %>
+</p>
+
+<br>
+
+<div>
+  <%# link_to 'Anterior', colegiados_anterior_path(@colegiado), method: :put %>
+  <%= link_to 'Chamar próximo', colegiados_proximo_path(@colegiado), method: :put, class: 'buttongrande verdeclaro' %>
+  <br><br><br>
+  <%# link_to 'Gerar Estatísticas', colegiados_gera_estatisticas_path(@colegiado), method: :put, class: 'button' %>
+</div>
+
+<br><br><br>
+
+<div style="border: double; margin: 5% 25% 0% 25%;">
+  <p>
+    <strong style="color: green;" >PRINCIPAIS ESTATISTICAS DA FILA:</strong>
+    <%= @vaga&.fila&.codigo %> -
+    <%= @vaga&.fila&.nome %>
+  </p>
+
+  <p>
+    <strong>Numero de pessoas aguardando:</strong>
+    <span style="color: red;"><%= @vaga&.fila&.npaguardando %>
+    </span>
+  </p>
+
+  <p>
+    <strong>Numero de pessoas atendidas:</strong>
+    <span style="color: green;"><%= @vaga&.fila&.npatendidas %>
+    </span>
+  </p>
+
+  <p>
+    <strong>Numero de pessoas que entraram na fila até agora:</strong>
+    <span style="color: blue;"><%= @vaga&.fila&.nptotal %>
+    </span>
+  </p>
+
+  <p>
+    <strong>Tempo médio de atendimento:</strong>
+    <% @tatd =  ActiveSupport::Duration.build(@vaga&.fila&.tempoatendimento).parts  %>
+    <%=  @tatd[:hours] %> hora(s),
+    <%=  @tatd[:minutes] %> minuto(s) e
+    <%= format("%.0f",  @tatd[:seconds]) %> segundo(s)
+  </p>
+
+</div>
+
+
+
+</body>
+
+<%= link_to 'Editar Colegiado', edit_colegiado_path(@colegiado), class: 'button botaoavancar' %>
+<%= link_to 'Voltar para Colegiados', colegiados_path, class: 'button botaovoltar' %>
+
+
+<script type="text/javascript">
+document.addEventListener("turbolinks:load", function () {
+
+  if (<%= @vaga.nil? ? "true" : "false" %>) {
+    App.room = App.cable.subscriptions.create("InscricaoChannel", {
+      received: trataInscricao
+    });
+  }
+
+  // para testar no rails console:
+  // InscricaoChannel.inscreve({aluno: {nome: 'Fulano de Tal'}, fila: {colegiado: {id: 1}}})
+});
+</script>

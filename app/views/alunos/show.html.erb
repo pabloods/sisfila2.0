@@ -1,0 +1,40 @@
+<body class="centralizarconteudo">
+
+<p id="notice"><%= notice %></p>
+
+<h1><%= @aluno.nome %></h1>
+<br><br>
+
+
+<p class="formatacaotabela">
+  <strong>Matricula:</strong>
+  <%= @aluno.matricula %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Nome:</strong>
+  <%= @aluno.nome %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Ativo?</strong>
+  <%= @aluno.ativo %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Score:</strong>
+  <%= @aluno.score %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>Fez pré-matrícula?</strong>
+  <%= @aluno.fezPreMatricula %>
+</p>
+
+<p class="formatacaotabela">
+  <strong>É formando?</strong>
+  <%= @aluno.formando %>
+</p>
+</body>
+<%= link_to 'Editar aluno', edit_aluno_path(@aluno), class: 'button botaoavancar' %>
+<%= link_to 'Alunos', alunos_path, class: 'button botaovoltar' %>
