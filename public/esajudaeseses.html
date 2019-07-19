@@ -12,26 +12,9 @@
 <div style="border: solid blue; padding: 0px 20px 20px 20px;">
 <h2> 1. Como inserir uma grande quantidade de alunos no sistema? </h2>
 
-	<p>Primeiramente vá até a área de trabalho e crie uma pasta chamada "matricula-ccc";
-	<br>Após criar a pasta insira os 3 arquivos listados abaixo:</p>
+  <a class="button verde" href="/importar">Clique aqui</a>
 
-	<p>
-	O primeiro arquivo deve conter o escalonamento dos alunos (scores) e deve se chamar escalonamento-alunos.txt;<br>
-	O segundo arquivo deve conter os formandos e deve se chamar formandos.txt;<br>
-	O terceiro arquivo deve conter os alunos que fizeram pré matrícula e deve se chamar prematricula.csv;<br>
-	</p>
-
-	<p>
-	# Caso o sistema esteja rodando localmente (na sua própria maquina), utilize os comandos:<br>
-	FILE=~/Desktop/matricula-ccc/escalonamento-alunos.txt rails runner script/le-escalonamento.rb
-	FILE=~/Desktop/matricula-ccc/formandos.txt rails runner script/le-formandos.rb
-	FILE=~/Desktop/matricula-ccc/prematricula.csv rails runner script/le-prematricula.rb
-	</p>
-
-	# Caso o sistema esteja hospedado no Heroku, utilize os seguintes comandos:
-	cat ~/Desktop/matricula-ccc/escalonamento-alunos.txt | heroku run --no-tty FILE=/dev/stdin rails runner script/le-escalonamento.rb
-	cat ~/Desktop/matricula-ccc/formandos.txt | heroku run --no-tty FILE=/dev/stdin rails runner script/le-formandos.rb
-	cat ~/Desktop/matricula-ccc/prematricula.csv | heroku run --no-tty FILE=/dev/stdin rails runner script/le-prematricula.rb
+    
 </div>
 
 <div style="border: solid red; margin-top: 40px; padding: 0px 20px 20px 20px;">
@@ -106,6 +89,14 @@
 .btpar{
   background-color: #dddddd;
   color: #666;
+}
+
+
+.verde{
+  background-color: green;
+  color: white;
+  width: 300px;
+  height: 20px;
 }
 
 #menutopoesquerdo ul {
