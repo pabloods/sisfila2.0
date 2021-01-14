@@ -7,7 +7,7 @@ gem 'devise'
 gem 'acts_as_list'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem 'cancancan'
 gem 'toastr-rails'
 
